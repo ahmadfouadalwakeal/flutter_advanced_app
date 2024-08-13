@@ -4,17 +4,20 @@ import 'package:flutter_advanced_app/core/theming/styles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTextFormField extends StatelessWidget {
-  const AppTextFormField(
-      {super.key,
-      this.contentPadding,
-      this.focusedBorder,
-      this.enabledBorder,
-      this.inputTextStyle,
-      this.hintStyle,
-      required this.hintText,
-      this.isObscureText,
-      this.suffixIcon,
-      this.backgroundColor});
+  const AppTextFormField({
+    super.key,
+    this.contentPadding,
+    this.focusedBorder,
+    this.enabledBorder,
+    this.inputTextStyle,
+    this.hintStyle,
+    required this.hintText,
+    this.isObscureText,
+    this.suffixIcon,
+    this.backgroundColor,
+    this.controller,
+    required this.validator,
+  });
   final EdgeInsetsGeometry? contentPadding;
   final InputBorder? focusedBorder;
   final InputBorder? enabledBorder;
@@ -24,10 +27,13 @@ class AppTextFormField extends StatelessWidget {
   final Color? backgroundColor;
   final bool? isObscureText;
   final Widget? suffixIcon;
+  final TextEditingController? controller;
+  final Function(String?) validator;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       decoration: InputDecoration(
         isDense: true,
         contentPadding: contentPadding ??
@@ -48,6 +54,20 @@ class AppTextFormField extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(16.0),
             ),
+        errorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 1.2,
+          ),
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 1.2,
+          ),
+          borderRadius: BorderRadius.circular(16.0),
+        ),
         hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
         hintText: hintText,
         suffixIcon: suffixIcon,
@@ -56,6 +76,9 @@ class AppTextFormField extends StatelessWidget {
       ),
       obscureText: isObscureText ?? false,
       style: TextStyles.font14DarkBlueMedium,
+      validator: (value) {
+        return validator(value);
+      },
     );
   }
 }
