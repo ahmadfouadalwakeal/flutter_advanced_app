@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced_app/features/login/data/models/login_request_body.dart';
 import 'package:flutter_advanced_app/features/login/data/repos/login_repo.dart';
 import 'package:flutter_advanced_app/features/login/logic/bloc/login_event.dart';
 import 'package:flutter_advanced_app/features/login/logic/bloc/login_state.dart';
@@ -17,7 +18,12 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
   void emitLoginState(LoginEvent event, Emitter<LoginState> emit) async {
     emit(const LoginState.loading());
-    final response = await _loginRepo.login(event.loginRequestBody);
+    final response = await _loginRepo.login(
+      LoginRequestBody(
+        email: emailController.text,
+        password: passwordController.text,
+      ),
+    );
     response.when(success: (loginResponse) {
       emit(
         LoginState.success(loginResponse),
