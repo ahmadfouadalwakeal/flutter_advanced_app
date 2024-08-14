@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'login_event.dart';
+part of 'sign_up_event.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$LoginEvent {
+mixin _$SignUpEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
@@ -34,33 +34,33 @@ mixin _$LoginEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Started value) started,
+    required TResult Function(_Started value) started,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Started value)? started,
+    TResult? Function(_Started value)? started,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Started value)? started,
+    TResult Function(_Started value)? started,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoginEventCopyWith<$Res> {
-  factory $LoginEventCopyWith(
-          LoginEvent value, $Res Function(LoginEvent) then) =
-      _$LoginEventCopyWithImpl<$Res, LoginEvent>;
+abstract class $SignUpEventCopyWith<$Res> {
+  factory $SignUpEventCopyWith(
+          SignUpEvent value, $Res Function(SignUpEvent) then) =
+      _$SignUpEventCopyWithImpl<$Res, SignUpEvent>;
 }
 
 /// @nodoc
-class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent>
-    implements $LoginEventCopyWith<$Res> {
-  _$LoginEventCopyWithImpl(this._value, this._then);
+class _$SignUpEventCopyWithImpl<$Res, $Val extends SignUpEvent>
+    implements $SignUpEventCopyWith<$Res> {
+  _$SignUpEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -77,7 +77,7 @@ abstract class _$$StartedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StartedImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$StartedImpl>
+    extends _$SignUpEventCopyWithImpl<$Res, _$StartedImpl>
     implements _$$StartedImplCopyWith<$Res> {
   __$$StartedImplCopyWithImpl(
       _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
@@ -86,12 +86,12 @@ class __$$StartedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$StartedImpl implements Started {
+class _$StartedImpl implements _Started {
   const _$StartedImpl();
 
   @override
   String toString() {
-    return 'LoginEvent.started()';
+    return 'SignUpEvent.started()';
   }
 
   @override
@@ -134,7 +134,7 @@ class _$StartedImpl implements Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Started value) started,
+    required TResult Function(_Started value) started,
   }) {
     return started(this);
   }
@@ -142,7 +142,7 @@ class _$StartedImpl implements Started {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Started value)? started,
+    TResult? Function(_Started value)? started,
   }) {
     return started?.call(this);
   }
@@ -150,7 +150,7 @@ class _$StartedImpl implements Started {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Started value)? started,
+    TResult Function(_Started value)? started,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -160,6 +160,6 @@ class _$StartedImpl implements Started {
   }
 }
 
-abstract class Started implements LoginEvent {
-  const factory Started() = _$StartedImpl;
+abstract class _Started implements SignUpEvent {
+  const factory _Started() = _$StartedImpl;
 }

@@ -4,10 +4,9 @@ import 'package:flutter_advanced_app/core/theming/styles.dart';
 import 'package:flutter_advanced_app/core/widgets/app_text_button.dart';
 import 'package:flutter_advanced_app/core/widgets/email_and_password.dart';
 import 'package:flutter_advanced_app/core/widgets/login_bloc_listener.dart';
-import 'package:flutter_advanced_app/features/login/data/models/login_request_body.dart';
 import 'package:flutter_advanced_app/features/login/logic/bloc/login_bloc.dart';
 import 'package:flutter_advanced_app/features/login/logic/bloc/login_event.dart';
-import 'package:flutter_advanced_app/features/login/ui/widgets/already_have_account_text%20.dart';
+import 'package:flutter_advanced_app/features/login/ui/widgets/dont_have_account_text%20.dart';
 import 'package:flutter_advanced_app/features/login/ui/widgets/terms_and_Conditions_text.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -62,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     verticalSpace(16),
                     const TermsAndConditionsText(),
                     verticalSpace(60),
-                    const AlreadyHaveAccountText(),
+                    const DontHaveAccountText(),
                     const LoginBlocListener(),
                   ],
                 ),
@@ -76,12 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void validateThenDoLogin(BuildContext context) {
     if (context.read<LoginBloc>().formKey.currentState!.validate()) {
-      context.read<LoginBloc>().add(LoginEvent.started(
-            LoginRequestBody(
-              email: context.read<LoginBloc>().emailController.text,
-              password: context.read<LoginBloc>().passwordController.text,
-            ),
-          ));
+      context.read<LoginBloc>().add(LoginEvent.started());
     }
   }
 }
