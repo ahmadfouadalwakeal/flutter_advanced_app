@@ -8,12 +8,12 @@ platform :android do
     sh "flutter build apk --release --flavor production --target lib/main_production.dart --no-tree-shake-icons"
     firebase_app_distribution(
         app:"1:534849498418:android:98303ff0eb98cec5fa3b2b",
-        firebase_cli_token:"1//03pT2huVhl4MQCgYIARAAGAMSNwF-L9IrqrLPpW0c2cxKvlMQ3-6BlaDnlptW7QUZ3nG25CJ7H22aQyuJ-ZzLTQXxwpflUJyOp3c",
+        firebase_cli_token: ENV['FIREBASE_CLI_TOKEN'],
         android_artifact_type:"APK",
-        upload_timeout: 1200,
         android_artifact_path:"../build/app/outputs/flutter-apk/app-production-release.apk",
         testers: "khalidgamel8@gmail.com",
-        release_notes:"First Fastlane Firebase Distribution "
+        release_notes:"First Fastlane Firebase Distribution ",
+        upload_timeout: 1200
   )
   end
 end
