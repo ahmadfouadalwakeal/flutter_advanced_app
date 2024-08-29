@@ -8,7 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/styles.dart';
 import '../../../core/widgets/app_text_button.dart';
-import '../../login/ui/widgets/terms_and_conditions_text.dart';
+import '../../login/ui/widgets/terms_and_Conditions_text.dart';
 import 'widgets/already_have_account_text.dart';
 import 'widgets/sign_up_bloc_listener.dart';
 
