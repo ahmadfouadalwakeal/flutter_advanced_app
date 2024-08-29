@@ -7,9 +7,10 @@ import 'package:flutter_advanced_app/core/widgets/login_bloc_listener.dart';
 import 'package:flutter_advanced_app/features/login/logic/bloc/login_bloc.dart';
 import 'package:flutter_advanced_app/features/login/logic/bloc/login_event.dart';
 import 'package:flutter_advanced_app/features/login/ui/widgets/dont_have_account_text%20.dart';
-import 'package:flutter_advanced_app/features/login/ui/widgets/terms_and_Conditions_text.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'widgets/terms_and_Conditions_text.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
