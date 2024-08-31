@@ -533,8 +533,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.15.0"
-<<<<<<< HEAD
-=======
   mime:
     dependency: transitive
     description:
@@ -559,7 +557,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
->>>>>>> 9bacdea6008eb402af35e58e4f01d7df8c0ebb94
   path:
     dependency: transitive
     description:
@@ -749,8 +746,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.7.2"
-<<<<<<< HEAD
-=======
   timing:
     dependency: transitive
     description:
@@ -807,7 +802,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.11+1"
->>>>>>> 9bacdea6008eb402af35e58e4f01d7df8c0ebb94
   vector_math:
     dependency: transitive
     description:
@@ -824,8 +818,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "14.2.5"
-<<<<<<< HEAD
-=======
   watcher:
     dependency: transitive
     description:
@@ -874,7 +866,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.2"
->>>>>>> 9bacdea6008eb402af35e58e4f01d7df8c0ebb94
 sdks:
   dart: ">=3.5.0-259.0.dev <4.0.0"
   flutter: ">=3.18.0-18.0.pre.54"
