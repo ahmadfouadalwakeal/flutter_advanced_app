@@ -1,7 +1,7 @@
 plugins {
     id "com.android.application"
     // START: FlutterFire Configuration
-    id 'com.google.gms.google-services'
+    // id 'com.google.gms.google-services'
     // END: FlutterFire Configuration
     id "kotlin-android"
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
@@ -46,7 +46,7 @@ android {
         versionCode = flutterVersionCode.toInteger()
         versionName = flutterVersionName
     }
-    flavorDimensions "default"
+     flavorDimensions "default"
     productFlavors {
       production {
           dimension "default"
@@ -57,7 +57,8 @@ android {
           applicationIdSuffix ".dev"
           resValue "string", "app_name", "DocDoc Development"
       }
-    }
+  }
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
@@ -70,3 +71,4 @@ android {
 flutter {
     source = "../.."
 }
+dependencies {}
