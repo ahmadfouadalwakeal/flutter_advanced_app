@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/doctors_blue_container.dart';
 import 'widgets/home_tap_bar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -22,6 +23,7 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const HomeTapBar(),
+              const DoctorsBlueContainer(),
             ],
           ),
         ),
