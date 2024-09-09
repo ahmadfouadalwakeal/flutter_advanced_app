@@ -66,6 +66,9 @@ class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -82,6 +85,9 @@ class __$$StartedImplCopyWithImpl<$Res>
   __$$StartedImplCopyWithImpl(
       _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

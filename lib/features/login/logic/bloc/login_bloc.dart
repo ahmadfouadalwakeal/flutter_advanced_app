@@ -8,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   final LoginRepo _loginRepo;
 
-  LoginBloc(this._loginRepo) : super(LoginState.initial()) {
+  LoginBloc(this._loginRepo) : super(const LoginState.initial()) {
     on<LoginEvent>(emitLoginState);
   }
 

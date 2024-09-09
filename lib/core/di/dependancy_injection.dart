@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_advanced_app/core/networking/api_service.dart';
 import 'package:flutter_advanced_app/core/networking/dio_factory.dart';
+import 'package:flutter_advanced_app/features/home/data/api/home_apis_service.dart';
+import 'package:flutter_advanced_app/features/home/data/repos/home_repo.dart';
 import 'package:flutter_advanced_app/features/login/data/repos/login_repo.dart';
 import 'package:flutter_advanced_app/features/login/logic/bloc/login_bloc.dart';
 import 'package:flutter_advanced_app/features/sign_up/data/repos/sign_up_repo.dart';
@@ -18,4 +20,7 @@ Future<void> setUpGetIt() async {
   //signUp
   getIt.registerLazySingleton<SignUpRepo>(() => SignUpRepo(getIt()));
   getIt.registerFactory<SignUpBloc>(() => SignUpBloc(getIt()));
+  //Home
+  getIt.registerLazySingleton<HomeApiService>(() => HomeApiService(dio));
+  getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
 }
